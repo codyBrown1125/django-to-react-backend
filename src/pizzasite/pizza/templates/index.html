@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+
+<h1>Hello world, again!</h1>
+
+{% for pizza in pizzas %}
+<div style="border-radius: 1px;">
+    <h2>{{ pizza.pizza_name }}</h2>
+    <img src="{{pizza.image}}" alt="cant upload">
+    <p>{{ pizza.price }}</p>
+    <p>{{ pizza.deal.deal_name }} - {{ pizza.deal.modifier }}</p>
+</div>
+{% endfor %}
