@@ -8,6 +8,6 @@ def index(request):
     context = {'pizzas' : Pizza.objects.all()}
     return render(request, "index.html", context)
 
-def PizzaView(viewset.ModelViewSets)
+def PizzaView(viewset.ModelViewSets):
     serializer_class = PizzaSerializer
     queryset = Pizza.objects.all()
