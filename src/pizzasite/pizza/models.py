@@ -10,9 +10,9 @@ class Deal(models.Model):
 
 class Pizza(models.Model):
     pizza_name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="pizza/uploads")
+    description = models.CharField(max_length=300)
     price = models.IntegerField()
-    deal = models.ForeignKey(Deal, on_delete=models.CASCADE)
+    # deal = models.ForeignKey(Deal, on_delete=models.CASCADE, required=False)
 
     def __str__(self):
         return self.pizza_name
